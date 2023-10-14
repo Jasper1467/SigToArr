@@ -57,7 +57,7 @@ class CSigToArr
 public:
 	static constexpr std::array<int, sizeof...(Chars)> m_arrValue = { HexStringToIntegerArray<Chars>::m_arrValue... };
 
-	constexpr auto Get() const
+	constexpr std::array<int, sizeof...(Chars)> Get() const
 	{
 		return m_arrValue;
 	}
